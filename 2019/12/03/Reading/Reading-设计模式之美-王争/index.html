@@ -90,7 +90,7 @@
 <meta property="og:site_name" content="刁爷的博客">
 <meta property="og:description" content="记录学习设计模式之美专栏重要知识点。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-17T09:50:17.142Z">
+<meta property="og:updated_time" content="2019-12-23T10:20:36.316Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式之美">
 <meta name="twitter:description" content="记录学习设计模式之美专栏重要知识点。">
@@ -421,7 +421,7 @@
                 
 
                 <span title="字数统计">
-                  1.4k 字
+                  2.1k 字
                 </span>
 
               
@@ -438,7 +438,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5 分钟
+                  7 分钟
                 </span>
               
             </div>
@@ -586,9 +586,85 @@
 </ol>
 </li>
 </ol>
-<h1 id="19-控制反转、依赖反转、依赖注入，这三者区别和联系-IOC"><a href="#19-控制反转、依赖反转、依赖注入，这三者区别和联系-IOC" class="headerlink" title="19.控制反转、依赖反转、依赖注入，这三者区别和联系(IOC)"></a>19.控制反转、依赖反转、依赖注入，这三者区别和联系(IOC)</h1><blockquote>
-<p>Inversion Of Control</p>
+<h1 id="19-控制反转（IOC）、依赖反转、依赖注入，这三者区别和联系"><a href="#19-控制反转（IOC）、依赖反转、依赖注入，这三者区别和联系" class="headerlink" title="19.控制反转（IOC）、依赖反转、依赖注入，这三者区别和联系"></a>19.控制反转（IOC）、依赖反转、依赖注入，这三者区别和联系</h1><blockquote>
+<p>控制反转，是比较笼统的设计思想。<br>Inversion Of Control</p>
 </blockquote>
+<p>例子：模板设计模式、依赖注入。</p>
+<h2 id="依赖注入（DI）"><a href="#依赖注入（DI）" class="headerlink" title="依赖注入（DI）"></a>依赖注入（DI）</h2><blockquote>
+<p>是一种具体编码技巧。<br>Dependency Injection</p>
+</blockquote>
+<blockquote>
+<p>不通过<code>New()</code>的方式在类<code>内部</code>创建依赖类对象，<br>而是将依赖的类对象在<code>外部</code>创建好之后，<br>通过<code>构造函数</code>、<code>函数参数</code>等方式传递或注入给类使用。</p>
+</blockquote>
+<h2 id="依赖注入框架（DI-Framework）"><a href="#依赖注入框架（DI-Framework）" class="headerlink" title="依赖注入框架（DI Framework）"></a>依赖注入框架（DI Framework）</h2><blockquote>
+<p>把对象的创建、组装（注入）等工作，交给框架<br>Java Spring框架</p>
+</blockquote>
+<h2 id="依赖反转原则（DIP）"><a href="#依赖反转原则（DIP）" class="headerlink" title="依赖反转原则（DIP）"></a>依赖反转原则（DIP）</h2><blockquote>
+<p>Dependency Inversion Principle<br>依赖倒置原则</p>
+</blockquote>
+<blockquote>
+<p>High-level modules should’t depend on low-level modules.<br>Both modules should depend on abstractions.<br>In addition, abstractions should’t depend on details.<br>Detail depend on abstractions.</p>
+</blockquote>
+<blockquote>
+<p>高层模块不依赖低层模块<br>所有模块通过抽象相互依赖<br>除此之外，抽象不要依赖实现<br>实现依赖抽象</p>
+</blockquote>
+<h1 id="20-KISS、-YAGNI原则"><a href="#20-KISS、-YAGNI原则" class="headerlink" title="20. KISS、 YAGNI原则"></a>20. KISS、 YAGNI原则</h1><blockquote>
+<p>Keep it simple and stupid<br>Keep it short and simple<br>Keep it simple and straightforward</p>
+<p>尽量保持简单</p>
+</blockquote>
+<ol>
+<li>不要使用同时看不懂的技术实现</li>
+<li>不同重复造轮子</li>
+<li>不要过度优化</li>
+</ol>
+<h2 id="YAGNI原则"><a href="#YAGNI原则" class="headerlink" title="YAGNI原则"></a>YAGNI原则</h2><blockquote>
+<p>You ain’t gonna need it<br>你不会需要它</p>
+</blockquote>
+<blockquote>
+<p>不要设计当前用不到的功能，当前如果用不到就不要做。<br>但是该预留得预留。可扩展</p>
+</blockquote>
+<h1 id="21-提高代码复用性，DRY原则"><a href="#21-提高代码复用性，DRY原则" class="headerlink" title="21. 提高代码复用性，DRY原则"></a>21. 提高代码复用性，DRY原则</h1><blockquote>
+<p>Don’t repeat yourself<br>不要重复自己</p>
+</blockquote>
+<h2 id="DRY原则"><a href="#DRY原则" class="headerlink" title="DRY原则"></a>DRY原则</h2><ol>
+<li>实现逻辑重复</li>
+<li>功能语义重复</li>
+<li>代码执行重复</li>
+</ol>
+<h2 id="代码复用性"><a href="#代码复用性" class="headerlink" title="代码复用性"></a>代码复用性</h2><ol>
+<li>减少代码耦合</li>
+<li>满足单一职责</li>
+<li>模块化</li>
+<li>业务和非业务逻辑分离</li>
+<li>通用代码下沉</li>
+<li>继承、多态、抽象、封装</li>
+<li>应用模板等设计模式</li>
+</ol>
+<h1 id="22-迪米特法则（LOD）实现高内聚，低耦合"><a href="#22-迪米特法则（LOD）实现高内聚，低耦合" class="headerlink" title="22.迪米特法则（LOD）实现高内聚，低耦合"></a>22.迪米特法则（LOD）实现高内聚，低耦合</h1><h2 id="高内聚"><a href="#高内聚" class="headerlink" title="高内聚"></a>高内聚</h2><blockquote>
+<p>指导类本身的设计<br>功能相近的应该放到同一个类中<br>不相关的功能，不放到同一类中</p>
+</blockquote>
+<h2 id="松耦合"><a href="#松耦合" class="headerlink" title="松耦合"></a>松耦合</h2><blockquote>
+<p>指导类与类之间的设计<br>类和类之间的依赖关系清晰简单<br>一个类的修改，另一个应该不用或很少改动</p>
+</blockquote>
+<ol>
+<li>依赖注入</li>
+<li>接口隔离</li>
+<li>基于接口而非实现编程</li>
+<li>迪米特法则</li>
+</ol>
+<h2 id="迪米特法则（LOD）"><a href="#迪米特法则（LOD）" class="headerlink" title="迪米特法则（LOD）"></a>迪米特法则（LOD）</h2><blockquote>
+<p>Law of Demeter</p>
+<p>另一种叫法<br>The least knowledge principle<br>最小知识原则</p>
+</blockquote>
+<blockquote>
+<p>Eash unit should have only limited knowledge about other units:<br>only units “closely” related to the current unit.<br>Or: Each unit should only talk to its friends;<br>Don’t talk to strangers.</p>
+<p>每个模块应该只了解和它关系密切的模块<br>只和自己的朋友说话，不和陌生人说话</p>
+</blockquote>
+<ol>
+<li>不该有直接依赖关系的类之间，不要有依赖</li>
+<li>有依赖关系的类之间，尽量只依赖必要的接口（有限知识）</li>
+</ol>
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>单一职责：自身出发<br>迪米特法则：关系出发<br>基于接口编程：使用者角度</p>
 
       
     </div>
@@ -771,7 +847,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -840,7 +916,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式之美"><span class="nav-number">1.</span> <span class="nav-text">设计模式之美</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#业务开发基于贫血模式-MVC违背OOP吗？"><span class="nav-number">2.</span> <span class="nav-text">业务开发基于贫血模式 MVC违背OOP吗？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#总结："><span class="nav-number">2.1.</span> <span class="nav-text">总结：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVC（Model-View-Controller）"><span class="nav-number">2.2.</span> <span class="nav-text">MVC（Model View Controller）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Web项目后端对应的设计模式（基于数据库开发）"><span class="nav-number">2.2.1.</span> <span class="nav-text">Web项目后端对应的设计模式（基于数据库开发）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#领域驱动设计（DDD）Domain-Driven-Design"><span class="nav-number">2.3.</span> <span class="nav-text">领域驱动设计（DDD）Domain Driven Design</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#贫血模式（Anemic-Domain-Model）"><span class="nav-number">2.4.</span> <span class="nav-text">贫血模式（Anemic Domain Model）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#受欢迎原因"><span class="nav-number">2.4.1.</span> <span class="nav-text">受欢迎原因:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#充血模式（Rich-Domain-Model）"><span class="nav-number">2.5.</span> <span class="nav-text">充血模式（Rich Domain Model）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么时候使用"><span class="nav-number">2.5.1.</span> <span class="nav-text">什么时候使用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#13-如何对接口鉴权这样一个功能开发做面向对象分析？-OOA"><span class="nav-number">3.</span> <span class="nav-text">13.如何对接口鉴权这样一个功能开发做面向对象分析？(OOA)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象分析（OOA）"><span class="nav-number">3.1.</span> <span class="nav-text">面向对象分析（OOA）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#14-如何利用面向对象设计和编程开发接口鉴权功能？-OOD、OOP"><span class="nav-number">4.</span> <span class="nav-text">14.如何利用面向对象设计和编程开发接口鉴权功能？(OOD、OOP)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象设计（OOD）"><span class="nav-number">4.1.</span> <span class="nav-text">面向对象设计（OOD）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#泛化（继承关系）-extends"><span class="nav-number">4.1.1.</span> <span class="nav-text">泛化（继承关系） extends</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现（接口和实现关系）implements"><span class="nav-number">4.1.2.</span> <span class="nav-text">实现（接口和实现关系）implements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#依赖（只要-B-类对象和-A-类对象有任何使用关系，我们都称它们有依赖关系）"><span class="nav-number">4.1.3.</span> <span class="nav-text">依赖（只要 B 类对象和 A 类对象有任何使用关系，我们都称它们有依赖关系）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组合（组合、聚合、关联）"><span class="nav-number">4.1.4.</span> <span class="nav-text">组合（组合、聚合、关联）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象编程（OOP）"><span class="nav-number">4.2.</span> <span class="nav-text">面向对象编程（OOP）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#15-单一职责原则（SRP）"><span class="nav-number">5.</span> <span class="nav-text">15.单一职责原则（SRP）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#技巧"><span class="nav-number">5.1.</span> <span class="nav-text">技巧</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#16-对扩展开放、修改关闭（OCP）"><span class="nav-number">6.</span> <span class="nav-text">16.对扩展开放、修改关闭（OCP）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#单继承、多实现"><span class="nav-number">7.</span> <span class="nav-text">单继承、多实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#17-里氏替换（LSP）跟多态有哪些区别？-哪些代码违背的LSP？"><span class="nav-number">8.</span> <span class="nav-text">17.里氏替换（LSP）跟多态有哪些区别？ 哪些代码违背的LSP？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#区别"><span class="nav-number">8.1.</span> <span class="nav-text">区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#违背LSP原则"><span class="nav-number">8.2.</span> <span class="nav-text">违背LSP原则</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#接口隔离原则（ISP）"><span class="nav-number">9.</span> <span class="nav-text">接口隔离原则（ISP）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#接口的类型："><span class="nav-number">9.1.</span> <span class="nav-text">接口的类型：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#与单一职责的区别"><span class="nav-number">9.2.</span> <span class="nav-text">与单一职责的区别</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#19-控制反转、依赖反转、依赖注入，这三者区别和联系-IOC"><span class="nav-number">10.</span> <span class="nav-text">19.控制反转、依赖反转、依赖注入，这三者区别和联系(IOC)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式之美"><span class="nav-number">1.</span> <span class="nav-text">设计模式之美</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#业务开发基于贫血模式-MVC违背OOP吗？"><span class="nav-number">2.</span> <span class="nav-text">业务开发基于贫血模式 MVC违背OOP吗？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#总结："><span class="nav-number">2.1.</span> <span class="nav-text">总结：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVC（Model-View-Controller）"><span class="nav-number">2.2.</span> <span class="nav-text">MVC（Model View Controller）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Web项目后端对应的设计模式（基于数据库开发）"><span class="nav-number">2.2.1.</span> <span class="nav-text">Web项目后端对应的设计模式（基于数据库开发）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#领域驱动设计（DDD）Domain-Driven-Design"><span class="nav-number">2.3.</span> <span class="nav-text">领域驱动设计（DDD）Domain Driven Design</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#贫血模式（Anemic-Domain-Model）"><span class="nav-number">2.4.</span> <span class="nav-text">贫血模式（Anemic Domain Model）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#受欢迎原因"><span class="nav-number">2.4.1.</span> <span class="nav-text">受欢迎原因:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#充血模式（Rich-Domain-Model）"><span class="nav-number">2.5.</span> <span class="nav-text">充血模式（Rich Domain Model）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么时候使用"><span class="nav-number">2.5.1.</span> <span class="nav-text">什么时候使用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#13-如何对接口鉴权这样一个功能开发做面向对象分析？-OOA"><span class="nav-number">3.</span> <span class="nav-text">13.如何对接口鉴权这样一个功能开发做面向对象分析？(OOA)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象分析（OOA）"><span class="nav-number">3.1.</span> <span class="nav-text">面向对象分析（OOA）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#14-如何利用面向对象设计和编程开发接口鉴权功能？-OOD、OOP"><span class="nav-number">4.</span> <span class="nav-text">14.如何利用面向对象设计和编程开发接口鉴权功能？(OOD、OOP)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象设计（OOD）"><span class="nav-number">4.1.</span> <span class="nav-text">面向对象设计（OOD）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#泛化（继承关系）-extends"><span class="nav-number">4.1.1.</span> <span class="nav-text">泛化（继承关系） extends</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现（接口和实现关系）implements"><span class="nav-number">4.1.2.</span> <span class="nav-text">实现（接口和实现关系）implements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#依赖（只要-B-类对象和-A-类对象有任何使用关系，我们都称它们有依赖关系）"><span class="nav-number">4.1.3.</span> <span class="nav-text">依赖（只要 B 类对象和 A 类对象有任何使用关系，我们都称它们有依赖关系）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组合（组合、聚合、关联）"><span class="nav-number">4.1.4.</span> <span class="nav-text">组合（组合、聚合、关联）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象编程（OOP）"><span class="nav-number">4.2.</span> <span class="nav-text">面向对象编程（OOP）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#15-单一职责原则（SRP）"><span class="nav-number">5.</span> <span class="nav-text">15.单一职责原则（SRP）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#技巧"><span class="nav-number">5.1.</span> <span class="nav-text">技巧</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#16-对扩展开放、修改关闭（OCP）"><span class="nav-number">6.</span> <span class="nav-text">16.对扩展开放、修改关闭（OCP）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#单继承、多实现"><span class="nav-number">7.</span> <span class="nav-text">单继承、多实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#17-里氏替换（LSP）跟多态有哪些区别？-哪些代码违背的LSP？"><span class="nav-number">8.</span> <span class="nav-text">17.里氏替换（LSP）跟多态有哪些区别？ 哪些代码违背的LSP？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#区别"><span class="nav-number">8.1.</span> <span class="nav-text">区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#违背LSP原则"><span class="nav-number">8.2.</span> <span class="nav-text">违背LSP原则</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#接口隔离原则（ISP）"><span class="nav-number">9.</span> <span class="nav-text">接口隔离原则（ISP）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#接口的类型："><span class="nav-number">9.1.</span> <span class="nav-text">接口的类型：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#与单一职责的区别"><span class="nav-number">9.2.</span> <span class="nav-text">与单一职责的区别</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#19-控制反转（IOC）、依赖反转、依赖注入，这三者区别和联系"><span class="nav-number">10.</span> <span class="nav-text">19.控制反转（IOC）、依赖反转、依赖注入，这三者区别和联系</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖注入（DI）"><span class="nav-number">10.1.</span> <span class="nav-text">依赖注入（DI）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖注入框架（DI-Framework）"><span class="nav-number">10.2.</span> <span class="nav-text">依赖注入框架（DI Framework）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖反转原则（DIP）"><span class="nav-number">10.3.</span> <span class="nav-text">依赖反转原则（DIP）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#20-KISS、-YAGNI原则"><span class="nav-number">11.</span> <span class="nav-text">20. KISS、 YAGNI原则</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#YAGNI原则"><span class="nav-number">11.1.</span> <span class="nav-text">YAGNI原则</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#21-提高代码复用性，DRY原则"><span class="nav-number">12.</span> <span class="nav-text">21. 提高代码复用性，DRY原则</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#DRY原则"><span class="nav-number">12.1.</span> <span class="nav-text">DRY原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码复用性"><span class="nav-number">12.2.</span> <span class="nav-text">代码复用性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#22-迪米特法则（LOD）实现高内聚，低耦合"><span class="nav-number">13.</span> <span class="nav-text">22.迪米特法则（LOD）实现高内聚，低耦合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#高内聚"><span class="nav-number">13.1.</span> <span class="nav-text">高内聚</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#松耦合"><span class="nav-number">13.2.</span> <span class="nav-text">松耦合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#迪米特法则（LOD）"><span class="nav-number">13.3.</span> <span class="nav-text">迪米特法则（LOD）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思考"><span class="nav-number">13.4.</span> <span class="nav-text">思考</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -884,7 +960,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.7k</span>
+    <span title="Site words total count">8k</span>
   
   -->
 
@@ -900,7 +976,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共6.7k字</span>
+  <span class="post-count">博客全站共8k字</span>
 
         
 

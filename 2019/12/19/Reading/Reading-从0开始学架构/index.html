@@ -82,17 +82,18 @@
 
 
 
-<meta name="description" content="Doing is better than saying.">
+<meta name="description" content="27. 如何设计计算高可用架构？主备 冷备  程序包和配置文件都准备好 ==服务器是启动的== 主机故障后，人工将备份机的==业务系统启动== 将任务分配器的任务请求切换发给备机       温备  ==业务已经启动== 只是不对外提供服务 主机故障后，人工将任务分配器的任务请求发送给备机 推荐温备    主从 需要==任务分配器==对任务分类   主机  备机  分别计算 主机故障，任务继续发给">
 <meta name="keywords" content="iOS">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:title" content="刁爷的博客">
-<meta property="og:url" content="https://diaojz.github.io/categories/工具/index.html">
+<meta property="og:url" content="https://diaojz.github.io/2019/12/19/Reading/Reading-从0开始学架构/index.html">
 <meta property="og:site_name" content="刁爷的博客">
-<meta property="og:description" content="Doing is better than saying.">
+<meta property="og:description" content="27. 如何设计计算高可用架构？主备 冷备  程序包和配置文件都准备好 ==服务器是启动的== 主机故障后，人工将备份机的==业务系统启动== 将任务分配器的任务请求切换发给备机       温备  ==业务已经启动== 只是不对外提供服务 主机故障后，人工将任务分配器的任务请求发送给备机 推荐温备    主从 需要==任务分配器==对任务分类   主机  备机  分别计算 主机故障，任务继续发给">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-20T03:37:46.442Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="刁爷的博客">
-<meta name="twitter:description" content="Doing is better than saying.">
+<meta name="twitter:description" content="27. 如何设计计算高可用架构？主备 冷备  程序包和配置文件都准备好 ==服务器是启动的== 主机故障后，人工将备份机的==业务系统启动== 将任务分配器的任务请求切换发给备机       温备  ==业务已经启动== 只是不对外提供服务 主机故障后，人工将任务分配器的任务请求发送给备机 推荐温备    主从 需要==任务分配器==对任务分类   主机  备机  分别计算 主机故障，任务继续发给">
 
 
 
@@ -122,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="https://diaojz.github.io/categories/工具/">
+  <link rel="canonical" href="https://diaojz.github.io/2019/12/19/Reading/Reading-从0开始学架构/">
 
 
 
 
 
-  <title>分类: 工具 | 刁爷的博客</title>
+  <title> | 刁爷的博客</title>
   
 
 
@@ -155,7 +156,7 @@
   <canvas id="canvas"></canvas>
   </div>
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -301,53 +302,318 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>工具<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://diaojz.github.io/2019/12/19/Reading/Reading-从0开始学架构/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="diaojz">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刁爷的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/07/29/How-to-use-the-markdown-grammar-draw-a-gantt-chart/" itemprop="url">
-              
-                <span itemprop="name">使用markdown语法绘制甘特图</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-29T14:56:03+08:00" content="2019-07-29">
-          07-29
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-19T13:58:29+08:00">
+                2019-12-19
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/12/19/Reading/Reading-从0开始学架构/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/12/19/Reading/Reading-从0开始学架构/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/12/19/Reading/Reading-从0开始学架构/" class="leancloud_visitors" data-flag-title>
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+
+                <span title="字数统计">
+                  533 字
+                </span>
+
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="27-如何设计计算高可用架构？"><a href="#27-如何设计计算高可用架构？" class="headerlink" title="27. 如何设计计算高可用架构？"></a>27. 如何设计计算高可用架构？</h1><h2 id="主备"><a href="#主备" class="headerlink" title="主备"></a>主备</h2><ol>
+<li><p>冷备</p>
+<ol>
+<li>程序包和配置文件都准备好</li>
+<li>==服务器是启动的==</li>
+<li>主机故障后，人工将备份机的==业务系统启动==</li>
+<li>将任务分配器的任务请求切换发给备机    </li>
+</ol>
+</li>
+<li><p>温备</p>
+<ol>
+<li>==业务已经启动==</li>
+<li>只是不对外提供服务</li>
+<li>主机故障后，人工将任务分配器的任务请求发送给备机</li>
+<li>推荐温备</li>
+</ol>
+</li>
+</ol>
+<h2 id="主从"><a href="#主从" class="headerlink" title="主从"></a>主从</h2><blockquote>
+<p>需要==任务分配器==对任务分类</p>
+</blockquote>
+<ol>
+<li>主机  备机  分别计算</li>
+<li>主机故障，任务继续发给主机，不管是否成功</li>
+<li>如果主机恢复，任务继续分配给主机</li>
+<li>如果主机不能恢复，将从机升级为主机（修改配置即可）。增加新的从机，从机就绪后，任务分配器继续分配。</li>
+</ol>
+<p>优点: 从机也发挥了性能<br>缺点：需要任务分类，增加复杂性</p>
+<h2 id="集群"><a href="#集群" class="headerlink" title="集群"></a>集群</h2><blockquote>
+<p>（计算高可用）区别于（存储高可用）</p>
+</blockquote>
+<h3 id="对称集群（负载均衡集群）"><a href="#对称集群（负载均衡集群）" class="headerlink" title="对称集群（负载均衡集群）"></a>对称集群（负载均衡集群）</h3><ol>
+<li>==任务分配器==采取策略，==随机、轮询等==分任务</li>
+<li>某台故障，不再分配给它，分给其他</li>
+<li>恢复后，再分给它</li>
+</ol>
+<h4 id="关键点"><a href="#关键点" class="headerlink" title="关键点"></a>关键点</h4><ol>
+<li>分配策略<ol>
+<li>随机、轮询</li>
+</ol>
+</li>
+<li>检测服务器状态<ol>
+<li>是否宕机</li>
+<li>网络是否正常</li>
+<li>任务执行状态（卡死、响应慢）</li>
+</ol>
+</li>
+</ol>
+<p>常见做法：发送心跳包（服务器信息和任务信息）    </p>
+<h3 id="非对称集群"><a href="#非对称集群" class="headerlink" title="非对称集群"></a>非对称集群</h3><blockquote>
+<p>Master-Slave 这种的，有首领的</p>
+</blockquote>
+<ol>
+<li>分角色。 ZAB算法选举、取ID最小做Master</li>
+<li>分任务。 Master和Slave任务不同</li>
+<li>故障。Master故障，需要选举一个Master；Slave故障，直接从集群里剔除</li>
+</ol>
+<p>复杂度增加</p>
+<ol>
+<li>任务分配策略。 划分任务类型</li>
+<li>角色分配。 Master-Slave  通过ZAB、Raft方式选举Leader</li>
+</ol>
+<p>例：Zookeeper</p>
+<ol>
+<li>无任务分配器节点，每个Server都是任务分配器，Follower收到请求后进行判断，如果是==写==就发给Leader（Master）,如果是==读==就自己处理。</li>
+<li>角色指定。 通过ZAB算法选举Leader，当Leader故障发生，所有Follower节点都==暂停读写操作==，开始选举，直到新Leader选出来。</li>
+</ol>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>给元宝买盒罐头吃~</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="diaojz 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    diaojz
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://diaojz.github.io/2019/12/19/Reading/Reading-从0开始学架构/" title>https://diaojz.github.io/2019/12/19/Reading/Reading-从0开始学架构/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://diaojz.github.io/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <div>
+    
+    <div>
+    
+        <div style="text-align:center;
+        color: #ccc;
+        font-size:14px;">
+        -------------本文结束~感谢您的阅读-------------
+        </div>
+    
+</div>
+
+    
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/16/Reading/Reading-数据结构与算法之美-王争/" rel="next" title="数据结构和算法之美">
+                <i class="fa fa-chevron-left"></i> 数据结构和算法之美
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -355,10 +621,13 @@
 
 
           
-      <div id="gitalk-container"></div>
-      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 
+  
+    <div class="comments" id="comments">
+    </div>
+  
 
+  
 
         </div>
         
@@ -379,8 +648,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -457,6 +735,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#27-如何设计计算高可用架构？"><span class="nav-number">1.</span> <span class="nav-text">27. 如何设计计算高可用架构？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#主备"><span class="nav-number">1.1.</span> <span class="nav-text">主备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主从"><span class="nav-number">1.2.</span> <span class="nav-text">主从</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集群"><span class="nav-number">1.3.</span> <span class="nav-text">集群</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对称集群（负载均衡集群）"><span class="nav-number">1.3.1.</span> <span class="nav-text">对称集群（负载均衡集群）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键点"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">关键点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非对称集群"><span class="nav-number">1.3.2.</span> <span class="nav-text">非对称集群</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -618,6 +912,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -658,6 +956,22 @@
 
 
   
+    
+      <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+      <script type="text/javascript">
+        const gitalk = new Gitalk({
+          clientID: '8fea746ab62602aebb77',
+          clientSecret: '59f92c06061206b7d84b64733e7a4247bb2dc69d',
+          repo: 'diaojz.github.io',
+          owner: 'diajz',
+          admin: 'diaojz'.split(','),
+          id: '1576735109120', #这个是基于文章时间创建 Issues ，默认是以文章标题作为标签创建 Issues 会导致长标题初始化失败。
+          pagerDirection: 'first',
+          // facebook-like distraction free mode
+          distractionFreeMode: false
+        })
+        gitalk.render('gitalk-container')
+      </script>
     
   
 
