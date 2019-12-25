@@ -46,19 +46,19 @@
   };
 </script>
 
-  <meta name="description" content="工作中使用最多的就是Git了，除了用了管理代码，发布博客。我还用来管理文档，可以使用git show或git diff查看更改。整理了一下Git常用命令，方便随时查阅。">
+  <meta name="description" content="工作中使用最多的就是Git了，除了用了管理代码，发布博客。我还用来管理文档，可以使用git show或git diff查看更改。整理了一下Git常用命令，方便随时查阅。 速查表">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git常用命令">
 <meta property="og:url" content="https://diaojz.github.io/2019/08/23/Git-Cheat-Sheet/index.html">
 <meta property="og:site_name" content="刁爷的博客">
-<meta property="og:description" content="工作中使用最多的就是Git了，除了用了管理代码，发布博客。我还用来管理文档，可以使用git show或git diff查看更改。整理了一下Git常用命令，方便随时查阅。">
+<meta property="og:description" content="工作中使用最多的就是Git了，除了用了管理代码，发布博客。我还用来管理文档，可以使用git show或git diff查看更改。整理了一下Git常用命令，方便随时查阅。 速查表">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://diaojz.github.io/2019/08/23/Git-Cheat-Sheet/git_command_pic.png">
-<meta property="og:updated_time" content="2019-09-18T09:59:32.714Z">
+<meta property="og:updated_time" content="2019-12-25T02:25:23.953Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git常用命令">
-<meta name="twitter:description" content="工作中使用最多的就是Git了，除了用了管理代码，发布博客。我还用来管理文档，可以使用git show或git diff查看更改。整理了一下Git常用命令，方便随时查阅。">
+<meta name="twitter:description" content="工作中使用最多的就是Git了，除了用了管理代码，发布博客。我还用来管理文档，可以使用git show或git diff查看更改。整理了一下Git常用命令，方便随时查阅。 速查表">
 <meta name="twitter:image" content="https://diaojz.github.io/2019/08/23/Git-Cheat-Sheet/git_command_pic.png">
 
 <link rel="canonical" href="https://diaojz.github.io/2019/08/23/Git-Cheat-Sheet/">
@@ -243,7 +243,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-18 17:59:32" itemprop="dateModified" datetime="2019-09-18T17:59:32+08:00">2019-09-18</time>
+                <time title="修改时间：2019-12-25 10:25:23" itemprop="dateModified" datetime="2019-12-25T10:25:23+08:00">2019-12-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -283,11 +283,9 @@
 
       
         <p>工作中使用最多的就是Git了，除了用了管理代码，发布博客。我还用来管理文档，可以使用<code>git show</code>或<code>git diff</code>查看更改。<br>整理了一下Git常用命令，方便随时查阅。</p>
+<h1 id="速查表"><a href="#速查表" class="headerlink" title="速查表"></a>速查表</h1><p><img src="/2019/08/23/Git-Cheat-Sheet/git_command_pic.png" alt="Git常用命令速查表"></p>
 <a id="more"></a>
 
-<!--# Git使用
-[TOC]
--->
 
 <h1 id="版本库"><a href="#版本库" class="headerlink" title="版本库"></a>版本库</h1><h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 克隆远程版本库</span></span><br><span class="line">git clone &lt;url&gt;</span><br><span class="line"><span class="meta">#</span><span class="bash"> 初始化本地版本库</span></span><br><span class="line">git init</span><br></pre></td></tr></table></figure>
 
@@ -330,7 +328,6 @@
 
 <h2 id="高级用法"><a href="#高级用法" class="headerlink" title="高级用法"></a>高级用法</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">git stash pop [–index] [stash_id]</span><br><span class="line">git stash pop 恢复最新的进度到工作区。git默认会把工作区和暂存区的改动都恢复到工作区。</span><br><span class="line">git stash pop --index 恢复最新的进度到工作区和暂存区。（尝试将原来暂存区的改动还恢复到暂存区）</span><br><span class="line">git stash pop stash@&#123;1&#125;恢复指定的进度到工作区。stash_id是通过git stash list命令得到的 </span><br><span class="line">通过git stash pop命令恢复进度后，会删除当前进度。</span><br><span class="line"></span><br><span class="line">git stash apply [–index] [stash_id]</span><br><span class="line">除了不删除恢复的进度之外，其余和git stash pop 命令一样。</span><br><span class="line"></span><br><span class="line">git stash drop [stash_id]</span><br><span class="line">删除一个存储的进度。如果不指定stash_id，则默认删除最新的存储进度。</span><br><span class="line"></span><br><span class="line">git stash clear</span><br><span class="line">删除所有存储的进度。</span><br></pre></td></tr></table></figure>
 
-<h1 id="速查表"><a href="#速查表" class="headerlink" title="速查表"></a>速查表</h1><p><img src="/2019/08/23/Git-Cheat-Sheet/git_command_pic.png" alt="Git常用命令速查表"></p>
 
     </div>
 
@@ -366,8 +363,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/08/21/Reading/Reading-程序员进阶攻略/" rel="prev" title="读书笔记之程序员进阶攻略">
-      <i class="fa fa-chevron-left"></i> 读书笔记之程序员进阶攻略
+    <a href="/2019/08/21/Reading/Reading-程序员进阶攻略/" rel="prev" title="程序员进阶攻略">
+      <i class="fa fa-chevron-left"></i> 程序员进阶攻略
     </a></div>
       <div class="post-nav-item">
     <a href="/2019/09/18/Linux-learning/" rel="next" title="Linux学习笔记">
@@ -432,7 +429,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#版本库"><span class="nav-number">1.</span> <span class="nav-text">版本库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建版本库"><span class="nav-number">1.1.</span> <span class="nav-text">创建版本库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推送代码到指定仓库："><span class="nav-number">1.2.</span> <span class="nav-text">推送代码到指定仓库：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看本地代码关联的远程仓库"><span class="nav-number">1.3.</span> <span class="nav-text">查看本地代码关联的远程仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解除远程git和本地代码绑定"><span class="nav-number">1.4.</span> <span class="nav-text">解除远程git和本地代码绑定</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改、查看和提交"><span class="nav-number">2.</span> <span class="nav-text">修改、查看和提交</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改"><span class="nav-number">2.1.</span> <span class="nav-text">修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看"><span class="nav-number">2.2.</span> <span class="nav-text">查看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搜索"><span class="nav-number">2.3.</span> <span class="nav-text">搜索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提交"><span class="nav-number">2.4.</span> <span class="nav-text">提交</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#撤销"><span class="nav-number">3.</span> <span class="nav-text">撤销</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#回滚"><span class="nav-number">3.1.</span> <span class="nav-text">回滚</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码合并"><span class="nav-number">4.</span> <span class="nav-text">代码合并</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#合并"><span class="nav-number">4.1.</span> <span class="nav-text">合并</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决冲突"><span class="nav-number">4.2.</span> <span class="nav-text">解决冲突</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分支和标签"><span class="nav-number">5.</span> <span class="nav-text">分支和标签</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#分支"><span class="nav-number">5.1.</span> <span class="nav-text">分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打标签"><span class="nav-number">5.2.</span> <span class="nav-text">打标签</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#别名"><span class="nav-number">6.</span> <span class="nav-text">别名</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#打开配置文件"><span class="nav-number">6.1.</span> <span class="nav-text">打开配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置别名"><span class="nav-number">6.2.</span> <span class="nav-text">配置别名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#丧心病狂的log"><span class="nav-number">6.3.</span> <span class="nav-text">丧心病狂的log</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#暂存"><span class="nav-number">7.</span> <span class="nav-text">暂存</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#普通用法"><span class="nav-number">7.1.</span> <span class="nav-text">普通用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级用法"><span class="nav-number">7.2.</span> <span class="nav-text">高级用法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#速查表"><span class="nav-number">8.</span> <span class="nav-text">速查表</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#速查表"><span class="nav-number">1.</span> <span class="nav-text">速查表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#版本库"><span class="nav-number">2.</span> <span class="nav-text">版本库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建版本库"><span class="nav-number">2.1.</span> <span class="nav-text">创建版本库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推送代码到指定仓库："><span class="nav-number">2.2.</span> <span class="nav-text">推送代码到指定仓库：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看本地代码关联的远程仓库"><span class="nav-number">2.3.</span> <span class="nav-text">查看本地代码关联的远程仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解除远程git和本地代码绑定"><span class="nav-number">2.4.</span> <span class="nav-text">解除远程git和本地代码绑定</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改、查看和提交"><span class="nav-number">3.</span> <span class="nav-text">修改、查看和提交</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改"><span class="nav-number">3.1.</span> <span class="nav-text">修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看"><span class="nav-number">3.2.</span> <span class="nav-text">查看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搜索"><span class="nav-number">3.3.</span> <span class="nav-text">搜索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提交"><span class="nav-number">3.4.</span> <span class="nav-text">提交</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#撤销"><span class="nav-number">4.</span> <span class="nav-text">撤销</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#回滚"><span class="nav-number">4.1.</span> <span class="nav-text">回滚</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码合并"><span class="nav-number">5.</span> <span class="nav-text">代码合并</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#合并"><span class="nav-number">5.1.</span> <span class="nav-text">合并</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决冲突"><span class="nav-number">5.2.</span> <span class="nav-text">解决冲突</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分支和标签"><span class="nav-number">6.</span> <span class="nav-text">分支和标签</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#分支"><span class="nav-number">6.1.</span> <span class="nav-text">分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打标签"><span class="nav-number">6.2.</span> <span class="nav-text">打标签</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#别名"><span class="nav-number">7.</span> <span class="nav-text">别名</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#打开配置文件"><span class="nav-number">7.1.</span> <span class="nav-text">打开配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置别名"><span class="nav-number">7.2.</span> <span class="nav-text">配置别名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#丧心病狂的log"><span class="nav-number">7.3.</span> <span class="nav-text">丧心病狂的log</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#暂存"><span class="nav-number">8.</span> <span class="nav-text">暂存</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#普通用法"><span class="nav-number">8.1.</span> <span class="nav-text">普通用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级用法"><span class="nav-number">8.2.</span> <span class="nav-text">高级用法</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
