@@ -224,6 +224,7 @@ video {
 }
 hr {
   background-color: #ddd;
+  background-image: repeating-linear-gradient(-45deg, #fff, #fff 4px, transparent 4px, transparent 8px);
   border: 0;
   height: 3px;
   margin: 40px 0;
@@ -1165,7 +1166,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #c9ad4e;
+  background: #b87782;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
